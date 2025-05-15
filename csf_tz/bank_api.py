@@ -11,7 +11,8 @@ from frappe.utils import get_host_name, flt
 from time import sleep
 import binascii
 import os
-from werkzeug import url_fix
+# from werkzeug import url_fix
+from urllib.parse import quote_plus as url_fix
 import urllib.parse as urlparse
 from erpnext.accounts.doctype.payment_entry.payment_entry import get_payment_entry
 from frappe.utils.background_jobs import enqueue
